@@ -1,0 +1,54 @@
+.favorite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-surface-light);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.favorite-button:hover {
+  background-color: var(--color-surface);
+}
+
+.favorite-button:active {
+  transform: scale(0.98);
+}
+
+.favorite-button--favorited {
+  background-color: var(--color-accent);
+}
+
+.favorite-button--favorited:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.favorite-button__icon {
+  font-size: var(--font-size-lg);
+  transition: transform var(--transition-fast);
+}
+
+.favorite-button:hover .favorite-button__icon {
+  transform: scale(1.1);
+}
+
+.favorite-button--favorited .favorite-button__icon {
+  animation: heartbeat 0.3s ease-in-out;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

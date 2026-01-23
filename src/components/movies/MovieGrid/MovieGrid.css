@@ -1,0 +1,27 @@
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min-width), 1fr));
+  gap: var(--grid-gap);
+  padding: var(--spacing-md);
+}
+
+.movie-grid--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.movie-grid__empty-message {
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.movie-grid__empty-icon {
+  font-size: 48px;
+  margin-bottom: var(--spacing-md);
+}
+
+.movie-grid__empty-text {
+  font-size: var(--font-size-lg);
+}
