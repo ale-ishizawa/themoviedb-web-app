@@ -7,6 +7,12 @@ interface HeaderProps {
   showMenuButton?: boolean
 }
 
+const ArrowLeftIcon = () => (
+  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21 14H7M7 14L14 21M7 14L14 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
 export function Header({ 
   title, 
   showBackButton = false, 
@@ -27,7 +33,7 @@ export function Header({
             onClick={handleBack}
             aria-label="Go back"
           >
-            <span className="header__back-icon">←</span>
+            <ArrowLeftIcon />
           </button>
         ) : (
           <div /> 

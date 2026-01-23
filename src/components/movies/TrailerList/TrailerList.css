@@ -1,27 +1,53 @@
 .trailer-list {
-  margin-top: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+@media (min-width: 480px) {
+  .trailer-list {
+    margin-top: var(--spacing-lg);
+  }
 }
 
 .trailer-list__title {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .trailer-list__title {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+@media (min-width: 768px) {
+  .trailer-list__title {
+    text-align: left;
+  }
 }
 
 .trailer-list__items {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
+}
+
+@media (min-width: 480px) {
+  .trailer-list__items {
+    gap: var(--spacing-sm);
+  }
 }
 
 .trailer-list__item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
   background-color: var(--color-surface);
   border: none;
   border-radius: var(--radius-md);
@@ -29,6 +55,13 @@
   transition: background-color var(--transition-fast);
   text-align: left;
   width: 100%;
+}
+
+@media (min-width: 480px) {
+  .trailer-list__item {
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+  }
 }
 
 .trailer-list__item:hover {
@@ -39,13 +72,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  color: var(--color-text);
-  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
   flex-shrink: 0;
+}
+
+.trailer-list__play-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .trailer-list__info {
@@ -54,13 +87,19 @@
 }
 
 .trailer-list__name {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--color-text);
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media (min-width: 480px) {
+  .trailer-list__name {
+    font-size: var(--font-size-md);
+  }
 }
 
 .trailer-list__empty {

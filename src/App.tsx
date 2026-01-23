@@ -1,11 +1,12 @@
-import './App.css'
+import { RouterProvider } from 'react-router-dom'
+import { QueryProvider } from '@/providers'
+import { router } from '@/router'
 
 function App() {
   return (
-    <div className="app">
-      <h1>RT Movies</h1>
-      <p>Setup concluído com sucesso!</p>
-    </div>
+    <QueryProvider>
+      <RouterProvider router={router} />
+    </QueryProvider>
   )
 }
 

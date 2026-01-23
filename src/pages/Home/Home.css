@@ -1,0 +1,9 @@
+.home {
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+.home__content {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
